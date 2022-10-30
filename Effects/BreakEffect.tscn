@@ -1,0 +1,400 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://materials/Window.tres" type="Material" id=1]
+[ext_resource path="res://Effects/BreakEffect.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/GlassShattering.wav" type="AudioStream" id=3]
+
+[sub_resource type="PrismMesh" id=1]
+
+[sub_resource type="PrismMesh" id=2]
+
+[sub_resource type="PrismMesh" id=5]
+left_to_right = 0.0
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Piece1:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.734753, 0, -0.0421976 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Piece1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Piece2:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0.699601, 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Piece2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Piece3:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -0.012007, 0, -0.000483274 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Piece3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -180 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Piece4:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 1.41014, 0, -0.000483274 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Piece4:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -180 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("EdgePiece2:translation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 1.79691, 0, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("EdgePiece2:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, -180, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Piece5:translation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -1.44538, 0, -0.000483274 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Piece5:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -180 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("EdgePiece1:translation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( -1.82373, 0, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("EdgePiece1:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "ShatteringAnim"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Piece1:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.00836614, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.695155, 0, -0.0421976 ), Vector3( -0.695, 0, 3.545 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Piece1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 72, 90, 19 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Piece2:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.00836614, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.739199, 0, 0 ), Vector3( 0.739, 0.437, 1.947 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Piece2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 22, 222, 111 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Piece3:translation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0.0275915, 0, -0.000483274 ), Vector3( 0.028, -0.419, 2.839 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Piece3:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -180 ), Vector3( -190, -70, -180 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Piece4:translation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.00836614, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1.44974, 0, -0.000483274 ), Vector3( 1.45, 0.445, 3.51 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Piece4:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -180 ), Vector3( 180, -38.229, 90 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("EdgePiece2:translation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1.83651, 0, 0 ), Vector3( 1.837, 0.86, 1.886 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("EdgePiece2:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -180, 0 ), Vector3( 180, 0, 290 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Piece5:translation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.00836614, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -1.40579, 0, -0.000483274 ), Vector3( -1.406, 0, 3.005 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Piece5:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, -180 ), Vector3( 70, -90, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("EdgePiece1:translation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -1.82494, 0, 0 ), Vector3( -1.825, 0, 1.57 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("EdgePiece1:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( -50, 50, 100 ) ]
+}
+
+[node name="BreakEffect" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="Piece1" type="MeshInstance" parent="."]
+transform = Transform( 0.691726, 0, 0, 0, 0.577, 0, 0, 0, 0.027, -0.734753, 0, -0.0421976 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+
+[node name="Piece2" type="MeshInstance" parent="."]
+transform = Transform( 0.688014, 0, 0, 0, 0.576988, 0, 0, 0, 0.0271575, 0.699601, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )
+
+[node name="Piece3" type="MeshInstance" parent="."]
+transform = Transform( -0.688014, -5.04419e-08, 0, 6.01481e-08, -0.576988, 0, 0, 0, 0.0383599, -0.012007, 0, -0.000483274 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Piece4" type="MeshInstance" parent="."]
+transform = Transform( -0.688014, -5.04419e-08, 0, 6.01481e-08, -0.576988, 0, 0, 0, 0.0383599, 1.41014, 0, -0.000483274 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="Piece5" type="MeshInstance" parent="."]
+transform = Transform( -0.688014, -5.04419e-08, 0, 6.01481e-08, -0.576988, 0, 0, 0, 0.0383599, -1.44538, 0, -0.000483274 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="EdgePiece1" type="MeshInstance" parent="."]
+transform = Transform( 0.351842, 0, 0, 0, 0.576988, 0, 0, 0, 0.0383599, -1.82373, 0, 0 )
+mesh = SubResource( 5 )
+material/0 = ExtResource( 1 )
+
+[node name="EdgePiece2" type="MeshInstance" parent="."]
+transform = Transform( -0.351842, 0, 3.35353e-09, 0, 0.576988, 0, -3.0759e-08, 0, -0.0383599, 1.79691, 0, 0 )
+mesh = SubResource( 5 )
+material/0 = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 3 )
+anims/ShatteringAnim = SubResource( 4 )
+
+[node name="ShatterSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )

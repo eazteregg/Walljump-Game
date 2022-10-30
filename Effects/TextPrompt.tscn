@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/TextPrompt.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.2, 0.2, 0.2 )
+
+[node name="TextPrompt" type="Spatial"]
+script = ExtResource( 1 )
+text = "Hey there"
+
+[node name="Area" type="Area" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 1 )
+
+[node name="PopupPanel" type="RichTextLabel" parent="."]
+visible = false
+margin_left = 434.0
+margin_top = 252.0
+margin_right = 638.0
+margin_bottom = 381.0
+text = "Hey there"
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=1]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="ShortCut" id=2]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 52.0
+margin_right = 1015.0
+margin_bottom = 552.0
+rect_min_size = Vector2( 300, 500 )
+alignment = 1
+
+[node name="ChamberOne" type="Button" parent="VBoxContainer"]
+margin_top = 204.0
+margin_right = 1000.0
+margin_bottom = 224.0
+theme = SubResource( 1 )
+shortcut = SubResource( 2 )
+text = "Play Chamber One"
+
+[node name="ChamberTwo" type="Button" parent="VBoxContainer"]
+margin_top = 228.0
+margin_right = 1000.0
+margin_bottom = 248.0
+theme = SubResource( 1 )
+shortcut = SubResource( 2 )
+text = "Play Chamber Two"
+
+[node name="TerrainScene" type="Button" parent="VBoxContainer"]
+margin_top = 252.0
+margin_right = 1000.0
+margin_bottom = 272.0
+text = "Play Terrain Scene"
+
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+margin_top = 276.0
+margin_right = 1000.0
+margin_bottom = 296.0
+text = "Play Tutorial"
+
+[connection signal="button_up" from="VBoxContainer/ChamberOne" to="." method="_on_ChamberOne_button_up"]
+[connection signal="button_up" from="VBoxContainer/ChamberTwo" to="." method="_on_ChamberTwo_button_up"]
+[connection signal="button_up" from="VBoxContainer/TerrainScene" to="." method="_on_TerrainScene_button_up"]
+[connection signal="button_up" from="VBoxContainer/Tutorial" to="." method="_on_Tutorial_button_up"]
